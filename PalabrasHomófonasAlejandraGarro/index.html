@@ -1,0 +1,277 @@
+<!DOCTYPE html> 
+<html lang="es"> 
+<head> 
+        <meta charset="UTF-8" /> 
+        <title>Palabras Homófonas</title> 
+    
+        <!-- enlaces a los archivos de estilos CSS externo y Script, defer se carga después del HTML --> 
+        <link rel="stylesheet" href="style.css"> 
+        <script src="script.js" defer></script> 
+</head> 
+    
+<body> 
+    <!-- 🔹 Encabezado principal de la página -->
+    <header> 
+         <!-- Contenedor del logo -->
+        <div class="logo-container">
+        <img src="images/logoAlejandra.png" alt="Logo educativo" class="logo">
+        </div> 
+        
+        <!-- Contenedor del título -->
+        <div class="titulo-container">
+       <!-- Título centrado del proyecto -->
+        <h1>Proyecto educativo: <br>
+            Aprendiendo Palabras Homófonas</h1>
+        </div>  
+        
+       <!-- menú de navegación principal-->
+        <div class="menu-container">  
+          <nav id="menu">
+            <a href="#introduccion" class="btn-intro">INTRODUCCIÓN</a>
+            <a href="#desarrollo" class="btn-desarrollo">DESARROLLO</a>
+            <a href="#evaluacion" class="btn-evaluacion">EVALUACIÓN</a>
+            <a href="#referencias" class="btn-referencias">REFERENCIAS</a>  
+            <a href="#galeria" class="btn-galeria">GALERÍA</a>
+            <a href="#creditos" class="btn-creditos">CRÉDITOS</a>
+          </nav>
+
+        <!-- 🔹 Bloque de accesibilidad -->
+        <div id="accesibilidad">
+            <!-- Texto que explica la función -->
+            <p>Ajustar tamaño de letra:</p>
+            
+            <!-- Botones que llaman a la función cambiarLetra() con distintos tamaños -->
+            <button onclick="cambiarLetra(16)">Pequeña</button>
+            <button onclick="cambiarLetra(20)">Mediana</button>
+            <button onclick="cambiarLetra(24)">Grande</button>
+        </div>  
+        </div>
+    </header> 
+    
+    <!-- 🔹 Sección de audio -->
+    <section id="audio">
+        <!-- Título de la sección -->
+        <h2>Escucha este audio 🎧</h2>
+        <!-- Reproductor de audio con controles -->
+        <audio controls>
+            <!-- Fuente del archivo de audio en formato MP3 -->
+            <source src="Recursos_Audio/audioBienvenida.mp3" type="audio/mpeg">
+        </audio>
+    </section>
+    
+    <!-- 🔹 Sección de introducción -->
+    <section id="introduccion"> 
+        <h2>Introducción 🔎</h2> 
+        <!-- Contenedor que organiza texto e imagen en fila -->
+        <div class="intro-contenido">
+          <!-- Texto explicativo sobre palabras homófonas -->
+          <p>
+            ¿Sabías qué? <br>  
+            Las palabras homófonas suenan igual, pero, su escritura y su significado son diferentes. <br>
+            Según Sánchez et al.(2024) El aprendizaje de palabras homófonas es crucial en la enseñanza de la ortografía,<br> 
+            ya que estas palabras, que suenan de la misma forma, pero tienen diferentes significados y ortografía,<br> 
+            pueden generar confusiones en la escritura. <br> 
+            ¡Aprendamos a diferenciarlas!
+          </p> 
+            <!-- Imagen de palabras homófonas -->
+          <img src="images/homofonas.jpg" alt="Ejemplo de palabras homófonas" class="intro-img">
+            
+        </div>  
+          
+       <!-- 🔹 Sitio web incrustado dentro de la introducción-->
+        <div class="sitio-externo"> 
+            
+            <h3>Les invito a ver el siguiente recurso externo dentro de la página 🌐</h3>
+            <h3>Explora directamente aquí el artículo web sobre palabras homófonas</h3>
+            
+        <!-- Iframe: incrusta un sitio web dentro de tu página -->
+            <iframe src="https://comunicatweb.wordpress.com/2016/05/10/palabras-homofonas/"
+                width="800" 
+                height="600" 
+                style="border:1px solid #ccc; border-radius:8px;">
+            </iframe>
+        </div>       
+    </section>
+    <!-- 🔹 Sección de desarrollo -->
+    <section id="desarrollo"> 
+        <h2>Desarrollo ✒️</h2>
+        <p>
+        ¿Sabías qué?<br>
+        Si conocemos bien qué son las palabras homófonas, <br>
+        aprenderemos a escribir mejor y descubriremos todo un mundo <br>
+        de conocimiento.<br>
+        Según  un  estudio,  las  palabras  homófonas  representan aproximadamente  el  10%  de  las  palabras  en  español,<br>
+        lo  que  significa  que  un  dominio  adecuado  de  estas palabras <br>
+        puede mejorar significativamente las habilidades ortográficas de los alumnos. Sánchez et al.(2024) <br>   
+        En esta página, aprenderás a diferenciar palabras que <br>
+        suenan igual, pero, su escritura y significado es diferente.<br>
+        A continuación podrás ver un video, que te ayudará a aprender más.<br>
+        </p>
+        
+        <!-- 🔹 Video incrustado de YouTube -->
+        <div class="video-contenedor">
+            <iframe width="560" height="315"
+                    src="https://www.youtube.com/embed/XQpURwbZozM"
+                    title="Video sobre palabras homófonas"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                     allowfullscreen>
+            </iframe>
+        </div>    
+    </section>  
+      <!-- 🔹 Sección de Evaluación -->  
+    <section id="evaluacion">
+        <!-- Títulos de la actividad -->
+         <h2> Actividad Práctica 1 </h2>
+         <h2>Juego de memoria 🧠</h2>
+        <!-- Instrucciones para el juego de memoria -->
+                <p class="instrucciones">
+                A continuación veremos una actividad llamada "juego de memoria" <br>
+                Realízala y practica lo que hemos aprendido hasta ahora <br>
+                Instrucciones <br>    
+                Debes voltear cartas de dos en dos para encontrar las parejas correctas de palabras homófonas,<br>
+                hasta completar todas las parejas. <br>
+                También tienes opción de reiniciar el juego  <br>
+                !Adelante, amiguitos¡ 🚨    
+                </p>
+        
+         <!-- Botones que llaman funciones JavaScript -->
+        <button onclick="iniciarJuego()">Comenzar</button>
+        <button onclick="reiniciarJuegoMemoria()">Reiniciar juego</button> 
+                
+            
+         <!-- Tablero del juego de memoria -->
+        <div id="juego">
+            
+        <!-- 🔹 Mensaje de retroalimentación dinámico-->
+        <p id="mensajeJuego"></p>
+        </div>      
+    </section> 
+    
+    <!-- 🔹 Sección de crucigrama -->
+    <section>
+        <h2>Actividad Práctica 2 <br> Crucigrama de Palabras Homófonas creado en Hot Potatoes</h2>
+        <!-- Iframe que incrusta el crucigrama externo -->
+        <iframe src="Actividades/crucigramaHomófonas.htm"
+                width="800"
+                height="600"
+                style="border:1px solid #ccc;">
+        </iframe>
+    </section>    
+                
+    <!-- 🔹 Sección de Verdadero/Falso -->
+    <section id="verdaderoFalso">
+        <h2> Actividad Evaluativa </h2>
+        <h2>Verdadero o Falso</h2>
+            
+        <!-- 🔹 Instrucciones para la actividad VERDADERO/FALSO-->
+        <p class="instrucciones">
+            Lee cada afirmación con atención y selecciona si consideras que es Verdadera o Falsa.<br>
+            Al finalizar, podrás ver tu puntaje y un mensaje de retroalimentación.
+        </p>
+        <!-- Pregunta 1 -->
+        <div class="pregunta1">
+            <p>La frase "El niño tubo que salir temprano" es correcta.</p>
+            <button onclick="verificar(true, false, 'res1')">Verdadero</button>
+            <button onclick="verificar(false, false, 'res1')">Falso</button>
+            <p class="resultado" id="res1"></p>
+        </div>
+        <!-- Pregunta 2 -->
+        <div class="pregunta2">
+            <p>En la oración "Necesitamos comprar un tubo de PVC", la palabra está bien escrita.</p>
+            <button onclick="verificar(true, true, 'res2')">Verdadero</button>
+            <button onclick="verificar(false, true, 'res2')">Falso</button>
+            <p class="resultado" id="res2"></p>
+        </div>
+        <!-- Pregunta 3 -->
+        <div class="pregunta3">
+        <p>Las palabras homófonas se escriben igual, pero suenan diferente.</p>
+            <button onclick="verificar(true, true, 'res3')">Verdadero</button>
+            <button onclick="verificar(false, true, 'res3')">Falso</button>
+            <p class="resultado" id="res3"></p>
+        </div>   
+        <!-- Pregunta 4 -->
+        <div class="pregunta4">
+        <p>"Vota" y "Bota" son homófonas porque se pronuncian igual.</p>
+            <button onclick="verificar(true, true, 'res4')">Verdadero</button>
+            <button onclick="verificar(false, true, 'res4')">Falso</button>
+            <p class="resultado" id="res4"></p>
+        </div>  
+        <!-- Pregunta 5 -->
+        <div class="pregunta5">
+        <p>Las palabras homófonas se diferencian solo en la pronunciación, no en la escritura.</p>  
+            <button onclick="verificar(true, true, 'res5')">Verdadero</button>
+            <button onclick="verificar(false, true, 'res5')">Falso</button>
+            <p class="resultado" id="res5"></p>
+        </div>    
+               
+        <!-- Aquí se muestra el puntaje acumulado de aciertos -->
+        <p id="puntaje">Aciertos: 0</p>
+        
+        <!-- Mensaje final de retroalimentación (se llena dinámicamente con JS) -->
+        <p id="mensajeFinal"></p>
+        <!-- 🔹 Botón para reiniciar actividad-->
+        <button class="btn-reinicio" onclick="reiniciarActividadVF()">Reiniciar actividad</button>
+        
+    </section>  
+    
+    <!-- 🔹 Sección de conclusión -->
+    <section id="conclusion"> 
+        <h2>Conclusión 🔒</h2>
+        <p>En conclusión, las palabras homófonas son muy importantes en nuestro idioma,<br>
+         ya que nos ayudan a comprender la riqueza y complejidad del lenguaje.<br> 
+         Aunque suenan igual, poseen significados distintos,<br>
+         lo que exige atención al contexto para evitar confusiones en la comunicación escrita y oral. <br>
+         Reconocerlas y utilizarlas correctamente fortalece nuestras competencias lingüísticas, <br>
+         mejora la ortografía y fomenta una expresión más precisa. <br>   
+        </p>
+    </section>  
+    <!-- 🔹 Sección de referencias -->
+    <section id="referencias"> 
+        <h2>Referencias 📚</h2>
+        <!-- Lista de fuentes utilizadas en el proyecto -->
+        <ul>
+            <li>Aprende con Tía Viviana (2024) Palabras homófonas | Video educativo para niños.https://youtu.be/XQpURwbZozM?si=s_uSs8QRqqFmj0Gf </li>
+            <li>Canva.com (2026) Elaboración propia del prototipo para el proyecto 1.</li>
+            <li>Comunicatweb (2016) Palabras homófonas. https://comunicatweb.wordpress.com/2016/05/10/palabras-homofonas/</li>
+            <li>Design.com (2026) Creador de logos.
+                <!-- Enlace externo con apertura en nueva pestaña -->
+            <a href="https://www.design.com/es-es/creador-de-logos?code=25OFFSEM&utm_medium=cpc&utm_source=google&utm_campaign=centralamerica_logo_maker_spanish_ai_max&utm_adgroup=free_logo&utm_content=766761088290&utm_keyword=creador+de+logos+gratis&utm_network=g&gad_source=1&gad_campaignid=22795315604&gbraid=0AAAAADwF9LAanw1GWRDwG_Fv1rRL_-UfJ&gclid=CjwKCAjwjtTNBhB0EiwAuswYhnJ7oMUe7Txm-He47szCgSiaFIzPZOvVwHaR--YcV5grur8dGeInsBoCcj0QAvD_BwE" target="_blank">
+                Enlace al recurso
+            </a>
+            </li>    
+            <li>Garro, A (2026) Elaboración de la página web. Proyecto educativo: Aprendiendo Palabras Homófonas</li>
+            <li>Josué. (2022). Fuentes HTML: Ejemplo de familia de fuentes CSS (caracteres Serif y Sans Serif). freeCodeCamp en Español. <br>
+                https://www.freecodecamp.org/espanol/news/fuentes-html-ejemplo-de-familia-de-fuentes-css/  </li>  
+            <li>Sánchez et al. (2024) Estrategia didáctica interactiva para la enseñanza de palabras homófonas a través de Quizizz<br>
+                y su impacto en la ortografía estudiantil. https://soeici.org/index.php/alcon/article/view/275/501 </li>
+            
+        </ul>    
+    </section>
+    <!-- 🔹 Sección de galería -->
+    <section id="galeria">
+        <h2>Galería 📸</h2>
+        <p>Aquí encontrarás imágenes alusivas al tema.</p>
+        
+        <!-- Contenedor de imágenes con estilo flexible -->
+        <div class="galeria-contenedor">
+            <img src="images/juegoMemoria.png" alt="Imagen alusiva 1">
+            <img src="images/Ejemplos.png" alt="Imagen alusiva 2">
+            <img src="images/crucigrama.png" alt="Imagen alusiva 3">
+        </div>    
+    </section>
+    <!-- 🔹 Pie de página con créditos -->
+    <footer>
+    <section id="creditos">
+        <h2>Créditos 📎</h2>   
+        <p>Diseñado por: Alejandra Garro Miranda 🤗 ❤️ <br>
+           Estudiante de Licenciatura UNED 2026 <br>
+           Materia: Diseño y Elaboración de Multimedios <br>
+           Código: 02030 <br>
+           Todos los derechos reservados 
+        </p>
+    </section>
+        
+    </footer>
+</body> 
+</html>

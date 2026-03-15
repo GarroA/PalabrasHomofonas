@@ -1,0 +1,285 @@
+/* Estilos generales para toda la página*/ 
+body { 
+    font-family: Arial, sans-serif, Helvetica; /* tipografía principal */
+    /*background-color: #7c64f1; */
+    margin: 0; /* elimina márgenes por defecto */
+    padding: 0; /* elimina relleno por defecto */
+} 
+
+/* Contenedor principal de la página*/
+#contenedor {
+    max-width: 900px;   /* ancho máximo de la página */
+    margin: 0 auto;     /* centra el contenido horizontalmente */
+    padding: 20px;      /* espacio interno */
+    background-color: #fff; /* fondo blanco tipo hoja */
+    box-shadow: 0 0 10px rgba(0,0,0,0.1); /* sombra suave */
+}
+
+/* Fondo general del body*/
+body {
+    background-color: #f0f0f0; /* gris claro */
+    font-family: Arial, sans-serif;
+    line-height: 1.6; /* mejora la legibilidad del texto */
+}
+
+/* Encabezado */ 
+header { 
+    gap: 15px;                    
+    padding: 15px;
+    background-color: rgba(212, 220, 188, 0.21); 
+    color: #333; 
+    text-align: center; /* centra el texto */
+} 
+
+.logo {
+    width: 240px;   /* tamaño fijo del logo */
+    height: auto;  /* mantiene proporción */
+}
+
+/* 🔹 Estilos de accesibilidad */
+#accesibilidad {
+    margin-top: 10px;
+    padding: 8px;
+    background-color: rgba(151, 171, 218, 0.65); /* fondo azul suave */
+    border-radius: 5px;
+    display: inline-block;
+}
+
+#accesibilidad p {
+    margin: 0 0 5px 0;
+    font-weight: bold; /* resalta el texto */
+}
+
+#accesibilidad button {
+    margin-right: 5px;
+    padding: 5px 10px;
+    font-size: 14px;
+    cursor: pointer;
+    border: 1px solid #e5f679;
+    border-radius: 3px;
+    background-color: #e271f9;
+    color: black;   /* 🔹 aquí se define el color de la letra de los botones de accesibilidad */
+}
+
+#accesibilidad button:hover { background-color: #658ae2;} /* cambia color al pasar el mouse */
+
+/* ESTILOS DE LAS SECCIONES */ 
+section { 
+    margin: 20px; 
+    padding: 15px; 
+    background: white; 
+    border-radius: 8px; 
+} 
+/* BOTONES */ 
+button { 
+    background-color: #4c8baf; 
+    color: white; 
+    padding: 10px; 
+    border: none; 
+    cursor: pointer; 
+    font-size: 16px;
+    border-radius: 6px;
+} 
+button:hover { background-color: #45a049;} /* verde al pasar el mouse */
+
+#evaluacion button { margin-top: 26px;} /* empuja los botones del juego memoria hacia abajo */
+    
+/* Estilos para el tablero del juego de memoria */ 
+#juego { 
+    display: grid;
+    grid-template-columns: repeat(4, 100px); /* 4 columnas de 100px */
+    gap: 10px;
+    justify-content: center;
+    margin-top: 20px;
+}
+.carta {
+    width: 100px;
+    height: 100px;
+    background-color: #e0e0e0;
+    color: #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+.carta.volteada {
+    background-color: #fff;
+    border: 2px solid #4CAF50;
+}     
+/* 🔹 estilo especial para el botón de reinicio */
+#evaluacion button:nth-of-type(2) {
+    background-color: #e271f9; 
+    font-weight: bold;
+}
+#evaluacion button:nth-of-type(2):hover { background-color: #ff9999;} 
+
+/* Estilos para la actividad de Verdadero/Falso */
+.pregunta {
+    margin: 7px;
+    padding: 9px;
+    background: rgba(213, 233, 153, 0.68);
+    border-radius: 3px;
+}
+
+.resultado {
+    margin-top: 10px;
+    font-weight: bold;
+}    
+
+#puntaje {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 20px;
+}    
+
+#mensajeFinal {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 20px;
+    color: #333;
+} 
+
+#verdaderoFalso button {
+    margin: 8px;
+    padding: 9px 12px;
+    font-size: 14px;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    border-radius: 7px;
+    background-color: #658ae2;
+    transition: background-color 0.3s, transform 0.3s;
+}
+/* 🔹 Fondo especial y color de botones para la sección Verdadero/Falso */
+#verdaderoFalso { background-color: #f7d4f7;} /* violeta suave */
+#verdaderoFalso button:hover { background-color: #658ae2; transform: scale(1.05); }     
+   
+/* 🔹 Estilos generales para las secciones */
+section {
+    margin: 20px 0;   /* espacio arriba y abajo entre secciones */
+    padding: 15px;    /* espacio interno dentro de la sección */
+    border: 1px solid #ddd;  /* borde gris claro alrededor */
+    border-radius: 5px;      /* esquinas suavemente redondeadas */
+    background-color: #f9f9f9; /* fondo gris muy claro */
+}
+
+/* 🔹 Estilo para los títulos dentro de las secciones */
+section h2 { color: #333; } /* color gris oscuro para destacar el título */
+
+/* 🔹 Menú de navegación */
+#menu {
+    display: flex;
+    justify-content: center;
+    margin: 15px 0;
+    gap: 10px;
+}
+
+#menu a {
+    display: inline-block;
+    padding: 10px 20px;
+    border: 2px solid #333;
+    border-radius: 5px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #000;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+/* Colores para cada botón del menú*/
+.btn-intro { background-color: #8ef8b1; } 
+.btn-intro:hover { background-color: #90ee90; transform: scale(1.05); } 
+
+.btn-desarrollo { background-color: #e271f9;} 
+.btn-desarrollo:hover { background-color: #87cefa; transform: scale(1.05); } 
+
+.btn-evaluacion { background-color: #f8e2b9;} 
+.btn-evaluacion:hover { background-color: #ffcc80; transform: scale(1.05); } 
+
+.btn-referencias { background-color: #f7d4f7;} 
+.btn-referencias:hover { background-color: #dda0dd;transform: scale(1.05); } 
+
+.btn-galeria {background-color: #c4dda0; }
+.btn-galeria:hover {background-color: navajowhite; transform: scale(1.05); }
+
+.btn-creditos { background-color: rgba(236, 243, 121, 0.8); }
+.btn-creditos:hover { background-color: rgba(244, 192, 126, 0.37); transform: scale(1.05); }
+   
+section {
+    margin: 30px 0; /* espacio entre secciones */
+    padding: 20px; /* espacio interno dentro de la sección */
+    border: 1px solid #ddd; /* borde suave alrededor */
+    border-radius: 8px; /* esquinas redondeadas */
+    background-color: #f9f9f9; /* fondo gris claro */
+}
+
+/* 🔹 Desplazamiento suave en toda la página */
+html { scroll-behavior: smooth;}
+   
+/* Colores distintos para cada sección */
+#introduccion { background-color: #d4f7d4;} 
+#desarrollo { background-color: #d4e4f7;} 
+#conclusion { background-color: #f7f7d4;} 
+#referencias { background-color: #e0f7fa;} 
+
+/* Estilo de la sección Galería */
+#galeria {
+    background-color: #f9f9f9; /* fondo suave */
+    padding: 20px;
+    border-radius: 8px;
+    margin: 30px 0;
+    text-align: center;
+}
+.galeria-contenedor {
+    display: flex;
+    justify-content: center;
+    gap: 15px; /* espacio entre imágenes */
+    flex-wrap: wrap; /* permite que bajen si son muchas */
+    margin-top: 15px;
+}
+.galeria-contenedor img {
+    width: 200px;
+    border-radius: 6px;
+    border: 2px solid #ccc;
+    transition: transform 0.3s;
+}
+.galeria-contenedor img:hover { transform: scale(1.05);} /* efecto zoom suave */
+
+#creditos { background-color: #fce4ec;} /* rosado suave */
+
+#creditos {
+    text-align: center;   /* centra el contenido horizontalmente */
+    margin: 30px auto;    /* agrega espacio arriba/abajo y centra el bloque */
+     max-width: 800px;    /* opcional: limita el ancho para que no se vea muy extendido */
+}    
+
+/* 🔹 Estilos para la introducción con imagen */
+.intro-contenido {
+    display: flex;        /* coloca texto e imagen en fila */
+    align-items: center;  /* alinea verticalmente */
+    justify-content: space-between; /* separa texto e imagen */
+    gap: 10px;                  /* espacio entre ambos */
+}
+
+/* 🔹 Estilos para el video */
+.video-contenedor {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.video-contenedor iframe {
+    max-width: 100%;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+}
+
+.intro-contenido p { flex: 51; } 
+
+.intro-img {
+    width: 200px;     /* tamaño de la imagen */
+    height: auto;     /* mantiene proporción */
+    border-radius: 6px;  /* esquinas redondeadas opcionales */
+}
+
